@@ -1,0 +1,279 @@
+/* Kia Sportage — Responsive layout override.
+   Load AFTER concept05.css. Existing PlayCanvas messages and interactions unchanged. */
+* { box-sizing: border-box; }
+
+@media (max-width: 1199px) {
+  .luxury-top-bar { left: 12px !important; right: 12px !important; padding: 0 10px !important; }
+  .top-bar-brand .brand-title { font-size: clamp(16px, 2.15vw, 27px) !important; gap: 6px !important; }
+  .top-bar-brand .brand-kia, .top-bar-brand .brand-sportage { letter-spacing: .12em !important; }
+  .top-bar-right .top-social-links { margin-right: 10px !important; gap: 8px !important; }
+  body.app-ready #UI_container.luxury-left-sidebar { left: 50% !important; transform: translateX(-50%) !important; }
+  #UI_container.luxury-left-sidebar { height: auto !important; max-width: calc(100vw - 24px) !important; padding: 7px 10px !important; gap: 3px !important; }
+  #UI_container .sidebar-nav-item { min-width: 0 !important; padding: 9px 12px !important; }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .luxury-top-bar { top: 8px !important; height: 46px !important; }
+  .top-bar-center { display: none !important; }
+  .top-bar-left, .top-bar-right { flex: 0 1 auto !important; }
+  .top-bar-right { margin-left: auto !important; }
+  .top-bar-right .top-social-links { gap: 6px !important; margin-right: 8px !important; }
+  .top-bar-right .social-link-btn { width: 30px !important; height: 30px !important; flex: 0 0 30px !important; }
+  body.app-ready #UI_container.luxury-left-sidebar { bottom: max(10px, env(safe-area-inset-bottom)) !important; }
+  #UI_container.luxury-left-sidebar { width: max-content !important; max-width: calc(100vw - 16px) !important; overflow-x: auto !important; overflow-y: hidden !important; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  #UI_container.luxury-left-sidebar::-webkit-scrollbar { display: none; }
+  #UI_container .sidebar-group { gap: 3px !important; flex: 0 0 auto; }
+  #UI_container .sidebar-group-bottom { padding-left: 7px !important; margin-left: 5px !important; }
+  #UI_container .sidebar-nav-item { min-width: 46px !important; padding: 8px !important; flex: 0 0 auto; }
+  #UI_container .sidebar-nav-item .nav-icon { width: 25px !important; height: 25px !important; }
+  #UI_container .sidebar-nav-item .nav-icon svg { width: 22px !important; height: 22px !important; }
+  #UI_container .sidebar-nav-item span { font-size: 9px !important; letter-spacing: .02em !important; }
+  body.app-ready #UI_container2.bottom-env-carousel { bottom: 100px !important; left: 50% !important; right: auto !important; transform: translateX(-50%) !important; justify-content: center !important; max-width: calc(100vw - 20px) !important; }
+  #UI_container2 .carousel-cards-viewport { gap: 8px !important; }
+  #UI_container2 .env-thumbnail-card { width: clamp(90px, 17vw, 122px) !important; height: clamp(76px, 13vw, 100px) !important; }
+  .luxury-color-card { bottom: 209px !important; width: max-content !important; max-width: calc(100vw - 20px) !important; }
+  .luxury-color-card .color-palette-list { max-width: calc(100vw - 40px) !important; justify-content: flex-start !important; }
+  .feature-glass-modal { bottom: 212px !important; max-width: calc(100vw - 24px) !important; }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .luxury-top-bar { left: 8px !important; right: 8px !important; padding: 0 4px !important; height: 42px !important; }
+  .engine-segmented-control { height: 34px !important; }
+  .engine-ctrl-btn { min-width: 35px !important; padding: 0 9px !important; }
+  .engine-ctrl-btn span:last-child { display: none !important; }
+  .top-bar-right { gap: 5px !important; }
+  .top-bar-right .top-social-links { display: flex !important; gap: 4px !important; margin-right: 0 !important; }
+  .top-bar-right .social-link-btn { width: 27px !important; height: 27px !important; flex: 0 0 27px !important; }
+  .top-bar-right .social-link-btn svg { width: 13px !important; height: 13px !important; }
+  #btn-top-home { width: 36px !important; height: 36px !important; min-width: 36px !important; padding: 0 !important; }
+  #btn-top-home span { display: none !important; }
+  #btn-top-home svg { width: 17px !important; height: 17px !important; }
+  body.app-ready #UI_container.luxury-left-sidebar { bottom: max(8px, env(safe-area-inset-bottom)) !important; }
+  #UI_container.luxury-left-sidebar { width: calc(100vw - 12px) !important; max-width: calc(100vw - 12px) !important; padding: 5px 7px !important; justify-content: flex-start !important; border-radius: 14px !important; }
+  #UI_container .sidebar-nav-item { min-width: 43px !important; padding: 7px !important; border-radius: 10px !important; }
+  #UI_container .sidebar-nav-item span { display: none !important; }
+  #UI_container .sidebar-group-bottom { padding-left: 6px !important; margin-left: 4px !important; }
+  body.app-ready #UI_container2.bottom-env-carousel { bottom: 78px !important; left: 50% !important; transform: translateX(-50%) !important; }
+  #UI_container2 .env-thumbnail-card { width: clamp(78px, 26vw, 108px) !important; height: clamp(73px, 24vw, 93px) !important; border-radius: 13px !important; }
+  #UI_container2 .carousel-cards-viewport { gap: 6px !important; }
+  #UI_container2 .env-card-overlay { padding: 7px 8px !important; }
+  #UI_container2 .card-name-txt { font-size: 10px !important; }
+  .luxury-color-card { bottom: 187px !important; padding: 9px !important; border-radius: 16px !important; }
+  .luxury-color-card .swatch-concentric-container { width: 48px !important; height: 48px !important; flex-basis: 48px !important; }
+  .luxury-color-card .swatch-circle-fill { width: 38px !important; height: 38px !important; }
+  .luxury-color-card .color-row-item { min-width: 59px !important; }
+  .luxury-color-card .color-label-text { font-size: 10px !important; }
+  .feature-glass-modal { bottom: 185px !important; left: 8px !important; right: 8px !important; width: auto !important; height: auto !important; max-height: min(40vh, 230px); overflow-y: auto; flex-direction: row !important; gap: 10px !important; padding: 10px !important; }
+  .feature-media-box { width: 34% !important; height: 120px !important; }
+  .feature-text-block .feature-title { font-size: 14px !important; }
+  .feature-text-block .feature-desc { font-size: 10px !important; }
+}
+
+@media (max-width: 380px) {
+  .top-bar-right .top-social-links { gap: 3px !important; }
+  .top-bar-right .social-link-btn { width: 24px !important; height: 24px !important; flex-basis: 24px !important; }
+  #btn-top-home { width: 32px !important; height: 32px !important; min-width: 32px !important; }
+  #UI_container2 .env-thumbnail-card { width: 28vw !important; height: 72px !important; }
+  #UI_container2 .card-name-txt { font-size: 9px !important; }
+}
+
+/* Short landscape phones: keep controls accessible without covering the entire 3D scene. */
+@media (max-height: 520px) and (orientation: landscape) {
+  .luxury-top-bar { top: 4px !important; height: 38px !important; }
+  body.app-ready #UI_container.luxury-left-sidebar { bottom: 5px !important; }
+  #UI_container.luxury-left-sidebar { padding: 3px 8px !important; }
+  #UI_container .sidebar-nav-item { padding: 4px 8px !important; }
+  body.app-ready #UI_container2.bottom-env-carousel { left: 12px !important; bottom: 75px !important; transform: none !important; }
+  #UI_container2 .env-thumbnail-card { width: 78px !important; height: 58px !important; }
+  .luxury-color-card { bottom: 65px !important; left: auto !important; right: 8px !important; transform: none !important; max-width: 54vw !important; }
+  .luxury-color-card.collapsed { transform: translateY(18px) scale(.96) !important; }
+  .feature-glass-modal { bottom: 65px !important; right: 8px !important; left: auto !important; width: min(310px, 50vw) !important; }
+}
+/* Show KIA SPORTAGE on smaller screens */
+
+@media (max-width: 768px) {
+
+    .luxury-top-bar .top-bar-center {
+        display: flex !important;
+        flex: 0 0 100% !important;
+        justify-content: center !important;
+        order: -1;
+    }
+
+    .luxury-top-bar .top-bar-brand {
+        display: flex !important;
+    }
+
+    .luxury-top-bar .brand-title {
+        font-size: clamp(12px, 3.5vw, 18px) !important;
+        gap: 5px !important;
+    }
+
+    .luxury-top-bar .brand-kia {
+        letter-spacing: 0.12em !important;
+    }
+
+    .luxury-top-bar .brand-sportage {
+        letter-spacing: 0.10em !important;
+    }
+
+    .luxury-top-bar {
+        flex-wrap: wrap !important;
+        height: auto !important;
+        row-gap: 10px !important;
+        padding: 10px !important;
+    }
+}
+
+/* LAPTOP SCREENS — FIX ENVIRONMENT & NAV OVERLAP */
+
+@media (min-width: 769px) and (max-width: 1440px) {
+
+    /* Environment cards above bottom navbar */
+    #UI_container2.bottom-env-carousel {
+        position: fixed !important;
+        bottom: 120px !important;
+        left: 24px !important;
+        right: auto !important;
+        transform: none !important;
+        z-index: 46 !important;
+    }
+
+    /* Keep navigation centered at bottom */
+    body.app-ready #UI_container.luxury-left-sidebar {
+        bottom: 20px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        max-width: calc(100vw - 40px) !important;
+    }
+
+    /* Slightly smaller environment cards */
+    #UI_container2 .env-thumbnail-card {
+        width: 112px !important;
+        height: 100px !important;
+    }
+}
+
+/* MOBILE ENVIRONMENT TOGGLE */
+
+#mobile-env-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    #mobile-env-toggle {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+
+        bottom: 83px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        padding: 11px 18px;
+        border-radius: 13px;
+        border: 1px solid rgba(255,255,255,0.3);
+
+        background: linear-gradient(
+            180deg,
+            rgba(24,38,60,0.75),
+            rgba(14,22,35,0.65)
+        );
+
+        backdrop-filter: blur(24px);
+        color: white;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .05em;
+
+        z-index: 60;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    #mobile-env-toggle .env-arrow {
+        transition: transform .3s ease;
+    }
+
+    #mobile-env-toggle.open .env-arrow {
+        transform: rotate(180deg);
+    }
+
+    /* Environment hidden by default */
+    body.app-ready #UI_container2.bottom-env-carousel {
+        display: none !important;
+    }
+
+    /* Open environment cards */
+    body.app-ready #UI_container2.bottom-env-carousel.mobile-env-open {
+        display: flex !important;
+        position: fixed !important;
+        bottom: 135px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: max-content !important;
+        max-width: calc(100vw - 20px) !important;
+        z-index: 59 !important;
+    }
+
+    #UI_container2 .env-thumbnail-card {
+        width: clamp(76px, 26vw, 105px) !important;
+        height: 76px !important;
+    }
+
+    /* Color panels stay above toggle when opened */
+    #body-color-panel.luxury-color-card,
+    #seats-color-panel.luxury-color-card {
+        bottom: 135px !important;
+    }
+
+    /* Move color panel above cards when menu is open */
+    body:has(.mobile-env-open) #body-color-panel.luxury-color-card,
+    body:has(.mobile-env-open) #seats-color-panel.luxury-color-card {
+        bottom: 225px !important;
+    }
+}
+
+/* Hide Environment toggle until UI is ready */
+body.app-loading #mobile-env-toggle,
+body:not(.app-ready) #mobile-env-toggle {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Show Environment toggle only after UI is ready */
+@media (max-width: 768px) {
+    body.app-ready:not(.app-loading) #mobile-env-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+}
+
+/* Hide Environment toggle until UI is ready */
+body.app-loading #mobile-env-toggle,
+body:not(.app-ready) #mobile-env-toggle {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Show Environment toggle only after UI is ready */
+@media (max-width: 768px) {
+    body.app-ready:not(.app-loading) #mobile-env-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+}
